@@ -6,7 +6,7 @@
 * 初めの一歩 Models/Todo.phpを作成
 * config/dbconnect.phpを作成
 * dbconnect.phpのなかに授業で使ったソースコードをコピペ（注意事項がdbconnect.php）に書いてあるので確認
-* 
+* Todo.phpにdbconnect.phpを読み込んでというソースコード（命令を追加）
 *
 *
 *
