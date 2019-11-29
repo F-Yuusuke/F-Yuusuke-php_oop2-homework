@@ -21,7 +21,9 @@ class Todo
     // ４　３の２行目で書いたやつを使えるようにDbManagerをnewしている
     // これが誕生した瞬間にデータベースに接続してくださいっていう命令を書いているのがconstruct
     // 上記の命令が初期値
-    // {}の中の２行目の意味がわからない
+    // ２行目の意味は自分が所属しているクラスのdb_managerさらにdb_managerのなかにある
+    // connectを使ってってこと
+    // thisはフォルダを管理するときの/と一緒の意味
     public function __construct()
     {
         $this->db_manager = new DbManager();
