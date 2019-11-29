@@ -9,8 +9,8 @@
 * Todo.phpにdbconnect.phpを読み込んでというソースコード（命令を追加）
 * テーブルのtasks2を使えるようにしたことと、dbconnect.phpで作ったclass DbManagerを使えるようにした
 * 次は４からスタート（Todo.php15行目）
-*
-*
-*
+* constructを作ったよく意味がわかっていないから菅さんにきく
+* index.phpを作る
+* とりあえず前のやつをコピペして先に進みその都度作業を確認しながら進める
 *
 *
