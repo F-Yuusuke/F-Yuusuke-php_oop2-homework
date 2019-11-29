@@ -40,6 +40,23 @@ class Todo
         $created = date('Y-m-d H:i:s', time());
         $stmt->execute([$word,$created]);
     }
+
+    public function all()
+    {
+        // $stmt = $this->db_manager->dbh->prepare(ここにsql文);
+        // SELECT * FROM テーブル名
+
+        //１２ 登録したデータを表示してくれる
+        // prepareとexecuteはセットだからこの２行はかく　もしどちらかを書かなくてもかく
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table);
+        $stmt->execute();
+        // １２　一覧が欲しい時には　->fetchAll();メソッドを使う　取ってきたデータを使いやすくしてくれている
+        // 使いやすくしたものを$tasksに入れている
+        $tasks = $stmt->fetchAll();
+        // １２　この取得したデータを他のところへ持っていけるようにするコードがreturn
+        return $tasks;
+
+       }
 }
 
 ?>
