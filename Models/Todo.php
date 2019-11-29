@@ -29,6 +29,17 @@ class Todo
         $this->db_manager = new DbManager();
         $this->db_manager->connect();
     }
+
+     // ７　これをかく prepare excuteが関わってくるよ
+    // Todo用のデータを作成するために（レコードの中にデータを入れるため）以下を書いています
+    // このcreateメソッドでやっていることはtasks2にINSERTで情報を追加しますということを書いている
+    // ５３　更新した日付と登録した日付の更新がうまく表示されないので以下のメソッドの内容を書き換えます。
+    public function create($word)
+    {
+        $stmt = $this->db_manager->dbh->prepare('INSERT INTO '.$this->table.' (name, created_at) VALUES (? ,?)');
+        $created = date('Y-m-d H:i:s', time());
+        $stmt->execute([$word,$created]);
+    }
 }
 
 ?>
