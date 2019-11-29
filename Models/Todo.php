@@ -5,4 +5,10 @@
 // このファイルを読み込まないといけないのはもともとphpが持っているpdoというクラスを使えるようにするため
 require_once('config/dbconnect.php');
 
+// 2class Todoを作る
+class Todo
+{
+    
+}
+
 ?>
