@@ -7,7 +7,7 @@
 * config/dbconnect.phpを作成
 * dbconnect.phpのなかに授業で使ったソースコードをコピペ（注意事項がdbconnect.php）に書いてあるので確認
 * Todo.phpにdbconnect.phpを読み込んでというソースコード（命令を追加）
-*
+* テーブルのtasks2を使えるようにしたことと、dbconnect.phpで作ったclass DbManagerを使えるようにした
 *
 *
 *
