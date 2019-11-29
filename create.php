@@ -14,5 +14,8 @@ $todo = new Todo();
 // 実行してもらえるようにコードを書いています
 $todo->create($task);
 
+// １１　登録した後にトップのページに戻るためだけに以下を書いた
+header('Location: index.php');
+
 
 ?>
