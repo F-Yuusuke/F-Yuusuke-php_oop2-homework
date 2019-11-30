@@ -4,6 +4,12 @@
 // $id = $_GET['id'];
 // var_dump($id);
 
+// <!-- ２７　Models/Todo.phpのファイルを読み込んでくださいの呪文 -->
+// classTodoをnewしてそこでもらった情報を$taskに格納しいる
+require_once('Models/Todo.php');
+$todo = new Todo();
+$id = $_GET['id'];
+$task = $todo->get($id);
 ?>
 
 <!-- ２１　edit.phpを作る
