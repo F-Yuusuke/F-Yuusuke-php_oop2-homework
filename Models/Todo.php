@@ -57,6 +57,23 @@ class Todo
         return $tasks;
 
        }
+
+    //２６　新しいメソッドをこのclassの中に追加
+    //editするためのデータを取得 editがgetに変わっている？よくわからない　これは
+    // このメソッドは情報を更新するための情報をくださいと言っているだけのメソッドだから
+    // もし登録してとか更新してとかっというお願いになるとPOSTになるよ
+    // stmtにidの情報を取得している
+    // executeとgetのidは繋がっているから入る
+    public function get($id)
+    {
+    $stmt = $this->db_manager->dbh->prepare('SELECT * FROM '.$this->table.' WHERE id = ?');
+    $stmt->execute([$id]);
+    // ２６　fetchは一個だけ単体で取れるfetchallは全ての情報を取得する
+    // 今回だとidごとの情報を取っている
+    $task = $stmt->fetch();
+    // ２６　この後どこかで使うからこのreturnを使っている
+    return $task;
+    }
 }
 
 ?>
