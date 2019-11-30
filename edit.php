@@ -44,9 +44,10 @@ $task = $todo->get($id);
         <section>
             <form class="form-row" action="update.php" method="POST">
                 <div class="col-12 col-md-9 py-2">
-                <!-- ２８　inputの中にvalueを書き足した nameと合致しているものの情報を取っている-->
+                <!-- ２８　inputの中にvalueを書き足した wordと合致しているものの情報を取っている
+                taskのなかに入っているwordの名前と合致している情報を取ってるs-->
                 <!-- ３０　 エスケープ処理を実行したい箇所をh()で囲むとそこにエスケープ処理をを実行してくれる-->
-                <input type="text" name="task" class="form-control" placeholder="ADD TODO" value="<?php echo h($task['name'])?>">
+                <input type="text" name="task" class="form-control" placeholder="ADD TODO" value="<?php echo h($task['word'])?>">
                 <!-- ３１　これを書くことによってみんなには見えないけど情報が送れるようになるこの次にどこに送るのかを書いていく -->
                 <!-- ３２　valueにidが格納されるようにする 元の情報がゲットできたから次はこの情報を更新できるようにことが必要-->
                 <input type="hidden" name="id" value="<?php echo h($task['id']);?>">
