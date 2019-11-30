@@ -98,7 +98,8 @@ $tasks = $todo->all();
             </td>
             <td>
             <!-- ２３　EDITをクリックするとedit.phpファイルにリンクすることができるようにする
-            aタグを使うとGETが使える -->
+            aタグを使うとGETが使える　以下のところは特に変更するところがないのでこのまま進めます
+            後ほどフォントアンセムなどの更新を行う予定です -->
             <!-- href以降のところをかくとクリックしたidをそれぞれ取得することができる -->
             <!-- ４９　以下も４８と同様 -->
             <a class="text-info" href="delete.php?id=<?php echo h($task['id']); ?>"><i class="fas fa-trash-alt"></i></a>
