@@ -1,18 +1,15 @@
 <?php
 // １３ 自分以外のファイルを読み込む時に使う組み込み関数
 // config/config/dbconnect.phpを読み込んでくださいと言っている
-require_once ('Models/Todo.php');
+// １２で作ったallメソッドを使いたい
+require_once ('Mode.s/Todo.php');
 // ２０　以下をすることで１９で行った処理がこのファイルで効力を持つようになる
 require_once ('function.php');
 
 // １４　ここでclassTodoが使えるぜって感じ
-$todo = new Todo();
-
-
-// １５　何したかわかりません
-require_once('Models/Todo.php');
-//Todoクラスのインスタンス化
-$todo = new Todo();
+// ここで使うために１２でallメソッドを書いた
+$todo = new Toto();
+// １５　１４でnewしたので１２のallメソッドの中身を取得
 //DBからデータを全件取得
 $tasks = $todo->all();
 //
