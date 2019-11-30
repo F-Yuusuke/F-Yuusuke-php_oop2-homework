@@ -4,6 +4,10 @@
 // $id = $_GET['id'];
 // var_dump($id);
 
+// ２９　このページにも入力ホームがあるのでエスケープ処理を実行するために
+// function.phpを読み込んであげる　エグザクトリー
+require_once ('function.php');
+
 // <!-- ２７　Models/Todo.phpのファイルを読み込んでくださいの呪文 -->
 // classTodoをnewしてそこでもらった情報を$taskに格納しいる
 require_once('Models/Todo.php');
@@ -45,7 +49,7 @@ $task = $todo->get($id);
             <form class="form-row" action="update.php" method="POST">
                 <div class="col-12 col-md-9 py-2">
                 <!-- ２８　inputの中にvalueを書き足した wordと合致しているものの情報を取っている
-                taskのなかに入っているwordの名前と合致している情報を取ってるs-->
+                taskのなかに入っているwordの名前と合致している情報を取ってるss-->
                 <!-- ３０　 エスケープ処理を実行したい箇所をh()で囲むとそこにエスケープ処理をを実行してくれる-->
                 <input type="text" name="task" class="form-control" placeholder="ADD TODO" value="<?php echo h($task['word'])?>">
                 <!-- ３１　これを書くことによってみんなには見えないけど情報が送れるようになるこの次にどこに送るのかを書いていく -->
