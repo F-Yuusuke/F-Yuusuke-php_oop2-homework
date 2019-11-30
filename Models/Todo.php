@@ -47,7 +47,7 @@ class Todo
         // SELECT * FROM テーブル名
 
         //１２ 登録したデータを表示してくれる
-        // prepareとexecuteはセットだからこの２行はかく　もしどちらかを書かなくてもかく
+        // prepareとexecuteはセットだからこの２行はかく
         $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table);
         $stmt->execute();
         // １２　一覧が欲しい時には　->fetchAll();メソッドを使う　取ってきたデータを使いやすくしてくれている
