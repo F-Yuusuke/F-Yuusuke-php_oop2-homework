@@ -36,7 +36,7 @@ $tasks = $todo->all();
 </head>
 <body>
 <!-- ５　なんか知らんけどこれをコピペした -->
-<header class="px-5 bg-primary">
+<header class="px-5 bg-info">
     <nav class="navbar navbar-dark">
         <a href="index.php" class="navbar-brand">TODO APP</a>
         <div class="justify-content-end">
@@ -53,13 +53,13 @@ $tasks = $todo->all();
                 <input type="text" class="form-control" placeholder="ADD TODO" name="task">
             </div>
             <div class="py-2 col-md-3 col-10">
-                <button type="submit" class="col-12 btn btn-primary">追加</button>
+                <button type="submit" class="col-12 btn btn-info">追加</button>
             </div>
         </form>
 </section>
   <table class="table table-hover">
       <thead>
-        <tr class="bg-primary text-light">
+        <tr class="bg-info text-light">
             <th class=>する事</th>
             <th>期日</th>
             <th></th>

@@ -34,12 +34,12 @@ $task = $todo->get($id);
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="px-5 bg-primary">
+    <header class="px-5 bg-info">
         <nav class="navbar navbar-dark">
             <a href="index.php" class="navbar-brand">TODO APP</a>
             <div class="justify-content-end">
                 <span class="text-light">
-                    SeedKun
+                    今月
                 </span>
             </div>
         </nav>
@@ -58,7 +58,7 @@ $task = $todo->get($id);
                 <input type="hidden" name="id" value="<?php echo h($task['id']);?>">
                 </div>
                 <div class="py-2 col-md-3 col-12">
-                    <button type="submit" class="col-12 btn btn-primary btn-block">UPDATE</button>
+                    <button type="submit" class="col-12 btn btn-info btn-block">更新</button>
                 </div>
             </form>
         </section>
