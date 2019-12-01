@@ -74,6 +74,18 @@ class Todo
     // ２６　この後どこかで使うからこのreturnを使っている
     return $task;
     }
+
+        // ３４　どんなメソッドを作れば更新できる設計図を書くのかを考える
+    // 以下のupdateって書かれているところはメソッドの名前だから他の人がみても何をするメソッドなのかがわかるようにしておく
+    // ５１　今しているのはupdateして更新された日が登録できる
+    public function update($word,$id)
+    {
+    // ５１　updated_at = ?を付け足した
+    // $updated = date('Y-m-d H:i;s', time());を付け足した　Y-m-d H:i;s'は年月とかそれぞれ意味がある
+    $stmt = $this->db_manager->dbh->prepare('UPDATE '.$this->table.' SET word = ? , updated_at = ? WHERE id = ?');
+    $updated = date('Y-m-d H:i;s', time());
+    $stmt->execute([$word, $updated, $id]);
+    
 }
 
 ?>
