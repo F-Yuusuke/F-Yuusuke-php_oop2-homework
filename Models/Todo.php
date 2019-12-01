@@ -85,6 +85,20 @@ class Todo
     $stmt = $this->db_manager->dbh->prepare('UPDATE '.$this->table.' SET word = ? , updated_at = ? WHERE id = ?');
     $updated = date('Y-m-d H:i;s', time());
     $stmt->execute([$word, $updated, $id]);
+    }
+
+    // ４２　削除機能ができる設計図をかく
+    // 削除するに必要なのはidだけだからdeleteの横のかっこに入っている
+    // 変数は$idのみ
+    public function delete($id)
+    {
+    // ４２　合致するデータを探してそれを削除している
+    $stmt = $this->db_manager->dbh->prepare('DELETE FROM '.$this->table.' WHERE id = ?');
+    $stmt->execute([$id]);  
+    }
+
+
+    
     
 }
 
