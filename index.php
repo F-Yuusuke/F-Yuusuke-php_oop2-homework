@@ -2,7 +2,7 @@
 // １３ 自分以外のファイルを読み込む時に使う組み込み関数
 // config/config/dbconnect.phpを読み込んでくださいと言っている
 // １２で作ったallメソッドを使いたい
-require_once ('Mode.s/Todo.php');
+require_once ('Models/Todo.php');
 // ２０　以下をすることで１９で行った処理がこのファイルで効力を持つようになります
 require_once ('function.php');
 
