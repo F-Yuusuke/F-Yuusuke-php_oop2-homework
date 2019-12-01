@@ -88,7 +88,6 @@ $tasks = $todo->all();
             変更してあげる必要がある　今回のデフォルトの設定では今やっていることができない -->
             <td>登録<?php echo date('Y年m月d日', strtotime(h($task['due_date']))); ?>
             <br>
-            modified:<?php echo date('Y年m月d日', strtotime(h($task['updated_at']))); ?>
             </td>
 
             
