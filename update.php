@@ -10,4 +10,16 @@ require_once ('Models/Todo.php');
 // $idのなかにPOSTで送られてきたidを格納し、taskの情報も$taskに格納している
 $id =$_POST['id'];
 $task =$_POST['task'];
+
+// 37　ここでclassTodoが使えるぜって感じ
+$todo = new Todo();
+
+// ３８　classTodoのupdateっていうメソッドを実行 更新したいから
+// ここは$todoの中のupdateをさっき３６で受け取った$task,$idを使って実行してってこと
+$todo->update($task,$id);
+
+// ３９　登録した後にトップのページに戻るためだけに以下を書いた
+header('Location: index.php');
+
+// ４０　ここのページはcreate.phpのファイルと同じことをやっている
 ?>
