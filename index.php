@@ -8,10 +8,11 @@ require_once ('function.php');
 
 // １４　ここでclassTodoが使えるぜって感じ
 // ここで使うために１２でallメソッドを書いた
-$todo = new Toto();
+$todo = new Todo();
 // １５　１４でnewしたので１２のallメソッドの中身を取得
 //DBからデータを全件取得
 $tasks = $todo->all();
+
 //
 // echo '<pre>';
 // var_dump($tasks);
@@ -40,7 +41,7 @@ $tasks = $todo->all();
         <a href="index.php" class="navbar-brand">TODO APP</a>
         <div class="justify-content-end">
             <span class="text-light">
-                SeedKun
+                今月
             </span>
         </div>
     </nav>
@@ -52,15 +53,15 @@ $tasks = $todo->all();
                 <input type="text" class="form-control" placeholder="ADD TODO" name="task">
             </div>
             <div class="py-2 col-md-3 col-10">
-                <button type="submit" class="col-12 btn btn-primary">ADD</button>
+                <button type="submit" class="col-12 btn btn-primary">追加</button>
             </div>
         </form>
 </section>
   <table class="table table-hover">
       <thead>
         <tr class="bg-primary text-light">
-            <th class=>TODO</th>
-            <th>DUE DATE</th>
+            <th class=>する事</th>
+            <th>期日</th>
             <th></th>
             <th></th>
         </tr>
@@ -78,14 +79,14 @@ $tasks = $todo->all();
         １６で一個ずつ処理をして表示するようにしているので１７ではwordと時間が一個ずつ表示できるようにしている
         変更しないといけないところがあるので変更する -->
         <!-- ５０　日付を日本人が見えやすいように月何日というように変更 -->
-            <td><?php echo $task['name']; ?></td>
+            <td><?php echo $task['word']; ?></td>
             <td><?php echo date('F.d,Y', strtotime($task['due_date']))?></td>
             <!-- ５２　更新したものの年月日が表紙されるようにしている
             　上が登録されて日で下が更新された日　今のままだと更新されていない日が出てきているので
             次はこれが表示されないようにする
             今回はこのままだと更新された日しか表示されないのでデータベースの設定を
             変更してあげる必要がある　今回のデフォルトの設定では今やっていることができない -->
-            <td>registered:<?php echo date('Y年m月d日', strtotime(h($task['due_date']))); ?>
+            <td>登録<?php echo date('Y年m月d日', strtotime(h($task['due_date']))); ?>
             <br>
             modified:<?php echo date('Y年m月d日', strtotime(h($task['updated_at']))); ?>
             </td>
